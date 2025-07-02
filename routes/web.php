@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdukController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +17,10 @@ use App\Http\Controllers\ProdukController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/kirim-paket', function () {
+    return view('page.kirim');
+});
 
 
-Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
+route::get('/produk', 'App\Http\Controllers\produk_controller@index');
+
